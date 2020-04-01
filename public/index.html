@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coronavirus Tracker</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script>
+      var countrySelect,countryImage,countryImageBar,countrySelect1,countrySelect2,countryImageComp;
+      window.onload=function(){
+        document.body.className='';
+      };
+      window.onbeforeunload=function(){
+        document.body.className='fade';
+      };
+    </script>
+  </head>
+  <body class="fade">
+    <h1>Coronavirus Tracker</h1>
+    <p>
+      This tool provides charts and graphs of coronavirus statistics for different countries. The data is updated roughly once every hour.
+    </p>
+    <br/>
+    <h3>
+      Country By Country
+    </h3>
+    <br/>
+    <div class="dropdown">
+      <fieldset>
+        <legend>Select a Country</legend>
+        <select id="countries"></select>
+      </fieldset>
+    </div>
+    <br/>
+    <button onclick="updateImages();">
+      Get Data
+    </button>
+    <br/>
+    <br/>
+    <img id="countryImage" />
+    <img id="countryImageBar" />
+    <h3>
+      Compare Active Cases between Countries
+    </h3>
+    <br/>
+    <div class="dropdown">
+      <fieldset>
+        <legend>Select Country 1</legend>
+        <select id="country1"></select>
+      </fieldset>
+    </div>
+    <br/>
+    <div class="dropdown">
+      <fieldset>
+        <legend>Select Country 2</legend>
+        <select id="country2"></select>
+      </fieldset>
+    </div>
+    <br/>
+    <button onclick="updateImagesComp();">
+      Compare countries
+    </button>
+    <br/>
+    <br/>
+    <img id="countryImageComp" />
+    <script>
+      countrySelect = document.getElementById("countries");
+      countryImage = document.getElementById("countryImage");
+      countryImageBar = document.getElementById("countryImageBar");
+      function updateImages(){
+        countryImage.src='';
+        countryImageBar.src='';
+        countryImage.src = '/c/' + countrySelect.value.toLowerCase();
+        countryImageBar.src = '/c/' + countrySelect.value.toLowerCase()+"__bar";
+      }
+      countrySelect1 = document.getElementById("country1");
+      countrySelect2 = document.getElementById("country2");
+      countryImageComp = document.getElementById("countryImageComp");
+      function updateImagesComp(){
+        countryImageComp.src='';
+        countryImageComp.src = '/c/' + countrySelect1.value.toLowerCase() + '_' + countrySelect2.value.toLowerCase() + '__comp';
+      }
+      var countryNames=['USA', 'Italy', 'Spain', 'Germany', 'France', 'Iran', 'UK', 'Switzerland', 'Turkey', 'Belgium', 'Netherlands', 'Austria', 'S. Korea', 'Canada', 'Portugal', 'Brazil', 'Israel', 'Sweden', 'Australia', 'Norway', 'Czechia', 'Ireland', 'Denmark', 'Chile', 'Malaysia', 'Russia', 'Ecuador', 'Romania', 'Poland', 'Luxembourg', 'Philippines', 'Japan', 'Pakistan', 'India', 'Thailand', 'Saudi Arabia', 'Indonesia', 'Finland', 'Greece', 'South Africa', 'Peru', 'Dominican Republic', 'Iceland', 'Mexico', 'Panama', 'Colombia', 'Serbia', 'Argentina', 'Singapore', 'Croatia', 'Algeria', 'Slovenia', 'Qatar', 'Estonia', 'Hong Kong', 'Diamond Princess', 'Egypt', 'New Zealand', 'Iraq', 'Ukraine', 'UAE', 'Morocco', 'Lithuania', 'Armenia', 'Bahrain', 'Hungary', 'Lebanon', 'Bosnia and Herzegovina', 'Latvia', 'Tunisia', 'Moldova', 'Bulgaria', 'Slovakia', 'Andorra', 'Kazakhstan', 'Azerbaijan', 'North Macedonia', 'Costa Rica', 'Uruguay', 'Taiwan', 'Cyprus', 'Kuwait', 'Burkina Faso', 'Réunion', 'Jordan', 'Albania', 'San Marino', 'Cameroon', 'Vietnam', 'Cuba', 'Oman', 'Afghanistan', 'Ghana', 'Senegal', 'Malta', 'Uzbekistan', 'Ivory Coast', 'Faeroe Islands', 'Honduras', 'Channel Islands', 'Belarus', 'Mauritius', 'Nigeria', 'Sri Lanka', 'Venezuela', 'Palestine', 'Brunei', 'Martinique', 'Montenegro', 'Georgia', 'Bolivia', 'Guadeloupe', 'Kyrgyzstan', 'DRC', 'Cambodia', 'Mayotte', 'Trinidad and Tobago', 'Rwanda', 'Kenya', 'Gibraltar', 'Paraguay', 'Isle of Man', 'Liechtenstein', 'Madagascar', 'Monaco', 'Aruba', 'Bangladesh', 'French Guiana', 'Uganda', 'Macao', 'Guatemala', 'Jamaica', 'French Polynesia', 'Togo', 'Zambia', 'Niger', 'Barbados', 'Djibouti', 'El Salvador', 'Bermuda', 'Mali', 'Guinea', 'Ethiopia', 'Tanzania', 'Congo', 'Maldives', 'Gabon', 'Sint Maarten', 'Haiti', 'New Caledonia', 'Myanmar', 'Saint Martin', 'Bahamas', 'Equatorial Guinea', 'Eritrea', 'Cayman Islands', 'Mongolia', 'Namibia', 'Saint Lucia', 'Guyana', 'Dominica', 'Curaçao', 'Syria', 'Greenland', 'Laos', 'Libya', 'Mozambique', 'Seychelles', 'Suriname', 'Benin', 'Grenada', 'Eswatini', 'Zimbabwe', 'Guinea-Bissau', 'Saint Kitts and Nevis', 'Angola', 'Sudan', 'Antigua and Barbuda', 'Chad', 'Cabo Verde', 'Mauritania', 'Vatican City', 'Liberia', 'St. Barth', 'Turks and Caicos', 'Nicaragua', 'Nepal', 'Fiji', 'Montserrat', 'Somalia', 'Botswana', 'Gambia', 'Bhutan', 'Belize', 'British Virgin Islands', 'CAR', 'MS Zaandam', 'Anguilla', 'Burundi', 'Caribbean Netherlands', 'Papua New Guinea', 'St. Vincent Grenadines', 'Sierra Leone', 'Timor-Leste', 'China'];
+      countryNames.forEach(n=>[...document.querySelectorAll("select")].forEach(e=>e.options.add(new Option(n))));
+    </script>
+    <br/><br/><br/>
+    
+    <div id="footer">
+      Created by Sam Williams, Shiva Ganapathy & Ali Ahmad
+    </div>
+  </body>
+</html>
