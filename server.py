@@ -1,13 +1,14 @@
 import json
 import threading
 import requests
-import matplotlib.pyplot as plt
 import datetime
 import os
 import sys
 from dateutil import parser
 from urllib.request import Request, urlopen
 import time
+import matplotlib.pyplot as plt
+plt.rcParams.update({'font.size': 9})
 
 countryNames=['USA', 'Italy', 'Spain', 'Germany', 'France', 'Iran', 'UK', 'Switzerland', 'Turkey', 'Belgium', 'Netherlands', 'Austria', 'S. Korea', 'Canada', 'Portugal', 'Brazil', 'Israel', 'Sweden', 'Australia', 'Norway', 'Czechia', 'Ireland', 'Denmark', 'Chile', 'Malaysia', 'Russia', 'Ecuador', 'Romania', 'Poland', 'Luxembourg', 'Philippines', 'Japan', 'Pakistan', 'India', 'Thailand', 'Saudi Arabia', 'Indonesia', 'Finland', 'Greece', 'South Africa', 'Peru', 'Dominican Republic', 'Iceland', 'Mexico', 'Panama', 'Colombia', 'Serbia', 'Argentina', 'Singapore', 'Croatia', 'Algeria', 'Slovenia', 'Qatar', 'Estonia', 'Hong Kong', 'Diamond Princess', 'Egypt', 'New Zealand', 'Iraq', 'Ukraine', 'UAE', 'Morocco', 'Lithuania', 'Armenia', 'Bahrain', 'Hungary', 'Lebanon', 'Bosnia and Herzegovina', 'Latvia', 'Tunisia', 'Moldova', 'Bulgaria', 'Slovakia', 'Andorra', 'Kazakhstan', 'Azerbaijan', 'North Macedonia', 'Costa Rica', 'Uruguay', 'Taiwan', 'Cyprus', 'Kuwait', 'Burkina Faso', 'Réunion', 'Jordan', 'Albania', 'San Marino', 'Cameroon', 'Vietnam', 'Cuba', 'Oman', 'Afghanistan', 'Ghana', 'Senegal', 'Malta', 'Uzbekistan', 'Ivory Coast', 'Faeroe Islands', 'Honduras', 'Channel Islands', 'Belarus', 'Mauritius', 'Nigeria', 'Sri Lanka', 'Venezuela', 'Palestine', 'Brunei', 'Martinique', 'Montenegro', 'Georgia', 'Bolivia', 'Guadeloupe', 'Kyrgyzstan', 'DRC', 'Cambodia', 'Mayotte', 'Trinidad and Tobago', 'Rwanda', 'Kenya', 'Gibraltar', 'Paraguay', 'Isle of Man', 'Liechtenstein', 'Madagascar', 'Monaco', 'Aruba', 'Bangladesh', 'French Guiana', 'Uganda', 'Macao', 'Guatemala', 'Jamaica', 'French Polynesia', 'Togo', 'Zambia', 'Niger', 'Barbados', 'Djibouti', 'El Salvador', 'Bermuda', 'Mali', 'Guinea', 'Ethiopia', 'Tanzania', 'Congo', 'Maldives', 'Gabon', 'Sint Maarten', 'Haiti', 'New Caledonia', 'Myanmar', 'Saint Martin', 'Bahamas', 'Equatorial Guinea', 'Eritrea', 'Cayman Islands', 'Mongolia', 'Namibia', 'Saint Lucia', 'Guyana', 'Dominica', 'Curaçao', 'Syria', 'Greenland', 'Laos', 'Libya', 'Mozambique', 'Seychelles', 'Suriname', 'Benin', 'Grenada', 'Eswatini', 'Zimbabwe', 'Guinea-Bissau', 'Saint Kitts and Nevis', 'Angola', 'Sudan', 'Antigua and Barbuda', 'Chad', 'Cabo Verde', 'Mauritania', 'Vatican City', 'Liberia', 'St. Barth', 'Turks and Caicos', 'Nicaragua', 'Nepal', 'Fiji', 'Montserrat', 'Somalia', 'Botswana', 'Gambia', 'Bhutan', 'Belize', 'British Virgin Islands', 'CAR', 'MS Zaandam', 'Anguilla', 'Burundi', 'Caribbean Netherlands', 'Papua New Guinea', 'St. Vincent Grenadines', 'Sierra Leone', 'Timor-Leste', 'China']
 lowerCountryNames=[x.lower() for x in countryNames]
@@ -42,7 +43,7 @@ def graph(country,json_data):
     plt.title(title)
     plt.ylabel("Active Cases")
     plt.xlabel("Date")
-    plt.plot(xvals,yvals,label=fixCountryNames(country))
+    plt.plot(xvals[-10:],yvals[-10:],label=fixCountryNames(country))
     plt.legend()
     plt.savefig("/tmp/c/"+country+".png")
     
@@ -76,8 +77,8 @@ def comp(country1,country2,json_data1,json_data2):
     plt.title(title)
     plt.ylabel("Active Cases")
     plt.xlabel("Date")
-    plt.plot(xvals1,yvals1,label=fixCountryNames(country1))
-    plt.plot(xvals2,yvals2,label=fixCountryNames(country2))
+    plt.plot(xvals1[-10:],yvals1[-10:],label=fixCountryNames(country1))
+    plt.plot(xvals2[-10:],yvals2[-10:],label=fixCountryNames(country2))
     plt.legend()
     plt.savefig("/tmp/c/"+country1+"_"+country2+"__comp.png")
 
