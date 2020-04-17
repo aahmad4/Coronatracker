@@ -1,5 +1,5 @@
 # Live Coronavirus Tracker
-A live coronavirus tracking website, made with a back-end of Node.js / Python and a front-end of HTML / CSS, which tracks international data on the COVID-19 pandemic and displays it in easy to read graphics. We hosted the website on glitch and you can find the link [here](https://coronatracker.glitch.me/) or below.
+A live coronavirus tracking website, made with a back-end of Node.js / Python and a front-end of HTML / CSS, which tracks international data on the COVID-19 pandemic and displays it in easy to read graphics. We hosted the website on glitch and the link can be found [here](https://coronatracker.glitch.me/) or below.
 
 https://coronatracker.glitch.me/
 
