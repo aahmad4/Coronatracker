@@ -31,14 +31,14 @@ git clone https://github.com/aahmad4/Live-Coronavirus-Tracker
 In [server.py](https://github.com/aahmad4/Live-Coronavirus-Tracker/blob/master/server.py), change `"apikey"` to match your personal key on Rapid API.
 ```python
 def apiReq(countries):
-  apiArr=[]
-  for item in countries:
-      querystring = {"country":fixCountryNames(item)}
-
-      headers = {
-          'x-rapidapi-host': "coronavirus-monitor.p.rapidapi.com",
-          'x-rapidapi-key': os.environ["apikey"] # security measure, see ".env" in files to find the key
-          }
+    apiArr=[]
+    for item in countries:
+        querystring = {"country":fixCountryNames(item)}
+        
+        headers = {
+            'x-rapidapi-host': "coronavirus-monitor.p.rapidapi.com",
+            'x-rapidapi-key': os.environ["apikey"] # security measure, see ".env" in files to find the key
+            }
 ```
 
 ## Contributing
