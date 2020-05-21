@@ -116,3 +116,25 @@ if not os.path.exists("/tmp/c/"+arg1+".png") or os.path.getmtime("/tmp/c/"+arg1+
         graph(arg1, apiReq([arg1])[0])
         
         
+# def apiReq(countries):
+#     apiArr=[]
+#     for item in countries:
+#         querystring = {"country":fixCountryNames(item)}
+    
+#         headers = {
+#             'x-rapidapi-host': "coronavirus-monitor.p.rapidapi.com",
+#             'x-rapidapi-key': os.environ["apikey"] # security measure, see ".env" in files to find the key
+#             }
+
+#         response = requests.request("GET", "https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_particular_country.php", headers=headers, params=querystring)
+
+#         json_data = response.json()
+        
+#         json_data = json_data.values()
+
+#         #json_data = json_data['stat_by_country']
+
+#         json_data = sorted(json_data, key=lambda k: k['record_date']) 
+#         json_data.reverse()
+#         apiArr.append(json_data)
+#     return apiArr
