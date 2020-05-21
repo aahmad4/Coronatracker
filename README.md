@@ -38,7 +38,8 @@ git clone https://github.com/aahmad4/Live-Coronavirus-Tracker
 
 ## Implementation
 
-In [server.js](https://github.com/aahmad4/Live-Coronavirus-Tracker/blob/master/server.js) change the `python3` run command accordingly with your operating system.
+In [server.js](https://github.com/aahmad4/Live-Coronavirus-Tracker/blob/master/server.js) change the `python3` command 
+based on your python 3 installation.
 
 ```javascript
 var execProcess = exec(
