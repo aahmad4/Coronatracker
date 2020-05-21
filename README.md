@@ -22,12 +22,18 @@ To use our Coronavirus tracker, simply use our drop drown and select any country
 
 ## Built With
 
-* Python 3.7.7
-   * Matplotlib
-   * Requests
-* Node 12
-   * Node-fetch
-* Covid19API
+* [Python 3.7.7](https://www.python.org/)
+   * [Matplotlib](https://matplotlib.org/)
+   * [Requests](https://requests.readthedocs.io/en/master/)
+   
+* [Node 12](https://nodejs.org/en/)
+   * [Node-fetch](https://www.npmjs.com/package/node-fetch)
+   
+* [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
+
+* [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3)
+   
+* [Covid19API](https://covid19api.com/)
 
 ## Clone
 ```bash
@@ -36,8 +42,19 @@ git clone https://github.com/aahmad4/Live-Coronavirus-Tracker
 
 ## Implementation
 
-No prior modification of the project is required.
+In [server.js](https://github.com/aahmad4/Live-Coronavirus-Tracker/blob/master/server.js) change the `python3` run command accordingly with your operating system.
 
+```javascript
+var execProcess = exec(
+        'python3 server.py "' +
+          req.url
+            .substr(3)
+            .toLowerCase()
+            .replace(/%20/g, " ")
+            .replace(/\"/g, "") +
+          '"'
+      );
+```
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
