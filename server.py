@@ -140,54 +140,6 @@ if not os.path.exists("/tmp/c/"+arg1+".png") or os.path.getmtime("/tmp/c/"+arg1+
 #     yvals.reverse()
 #     return [xvals,yvals]
 
-# def graph(country,json_data):
-#     data=lineValsGen(country,json_data)
-#     xvals=data[0]
-#     yvals=data[1]
-    
-#     title = "Number of Active Cases of COVID-19"
-#     plt.title(title)
-#     plt.ylabel("Active Cases")
-#     plt.xlabel("Date")
-#     plt.plot(xvals[-10:],yvals[-10:],label=fixCountryNames(country))
-#     plt.legend()
-#     plt.savefig("/tmp/c/"+country+".png")
-    
-    
-
-# def bar(country,json_data):
-#     labels = ["Total Cases","Total Deaths","Total Recoveries"]
-#     totCases=json_data[0]["total_cases"].replace(",","")
-#     totDeaths=json_data[0]["total_deaths"].replace(",","")
-#     totRecov=json_data[0]["total_recovered"].replace(",","")
-#     values = [int(totCases) if totCases else 0,int(totDeaths) if totDeaths else 0,int(totRecov) if totRecov else 0]
-#     plt.bar(labels[0],values[0],label=labels[0])
-#     plt.bar(labels[1],values[1],label=labels[1])
-#     plt.bar(labels[2],values[2],label=labels[2])
-#     plt.title("Statistics in " + fixCountryNames(country))
-#     plt.legend()
-#     plt.savefig("/tmp/c/"+country+"__bar.png")
-
-
-# def comp(country1,country2,json_data1,json_data2):
-    
-#     data1=lineValsGen(fixCountryNames(country1),json_data1)
-#     xvals1=data1[0]
-#     yvals1=data1[1]
-    
-#     data2=lineValsGen(fixCountryNames(country2),json_data2)
-#     xvals2=data2[0]
-#     yvals2=data2[1]
-    
-#     title = "Number of Active Cases of COVID-19"
-#     plt.title(title)
-#     plt.ylabel("Active Cases")
-#     plt.xlabel("Date")
-#     plt.plot(xvals1[-10:],yvals1[-10:],label=fixCountryNames(country1))
-#     plt.plot(xvals2[-10:],yvals2[-10:],label=fixCountryNames(country2))
-#     plt.legend()
-#     plt.savefig("/tmp/c/"+country1+"_"+country2+"__comp.png")
-
 # def apiReq(countries):
 #     apiArr=[]
 #     for item in countries:
@@ -210,7 +162,3 @@ if not os.path.exists("/tmp/c/"+arg1+".png") or os.path.getmtime("/tmp/c/"+arg1+
 #         json_data.reverse()
 #         apiArr.append(json_data)
 #     return apiArr
-
-# arg1=sys.argv[1].lower()
-# isBar=arg1.endswith("__bar")
-# isComp=arg1.endswith("__comp")
