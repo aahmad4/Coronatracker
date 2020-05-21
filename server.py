@@ -116,31 +116,3 @@ if not os.path.exists("/tmp/c/"+arg1+".png") or os.path.getmtime("/tmp/c/"+arg1+
         graph(arg1, apiReq([arg1])[0])
         
         
-# countryNames=['USA','Spain','Italy','France','UK','Germany','Turkey','Russia','Iran','Brazil','Canada','Belgium','Netherlands','India','Peru','Switzerland','Portugal','Ecuador','Saudi Arabia','Sweden','Ireland','Mexico','Israel','Singapore','Austria','Pakistan','Chile','Japan','Belarus','Qatar','Poland','Romania','UAE','S. Korea','Ukraine','Indonesia','Denmark','Serbia','Philippines','Norway','Czechia','Bangladesh','Australia','Dominican Republic','Panama','Colombia','Malaysia','Egypt','South Africa','Finland','Morocco','Argentina','Luxembourg','Kuwait','Algeria','Moldova','Kazakhstan','Thailand','Bahrain','Hungary','Greece','Oman','Croatia','Uzbekistan','Afghanistan','Armenia','Iraq','Cameroon','Iceland','Azerbaijan','Bosnia and Herzegovina','Ghana','Estonia','Nigeria','New Zealand','North Macedonia','Bulgaria','Cuba','Slovenia','Slovakia','Lithuania','Guinea','Ivory Coast','Djibouti','Bolivia','Hong Kong','Tunisia','Latvia','Cyprus','Senegal','Albania','Andorra','Honduras','Kyrgyzstan','Lebanon','Diamond Princess','Niger','Costa Rica','Burkina Faso','Uruguay','Sri Lanka','San Marino','Guatemala','Channel Islands','Somalia','Georgia','DRC','Tanzania','Malta','Mayotte','Jordan','Taiwan','Mali','Réunion','Kenya','Jamaica','El Salvador','Palestine','Mauritius','Venezuela','Montenegro','Sudan','Equatorial Guinea','Isle of Man','Vietnam','Maldives','Paraguay','Gabon','Rwanda','Congo','Faeroe Islands','Martinique','Myanmar','Guadeloupe','Liberia','Gibraltar','Brunei','Ethiopia','Madagascar','French Guiana','Cambodia','Trinidad and Tobago','Cabo Verde','Bermuda','Sierra Leone','Aruba','Togo','Zambia','Monaco','Liechtenstein','Bahamas','Barbados','Uganda','Haiti','Mozambique','Sint Maarten','Guyana','Guinea-Bissau','Eswatini','Cayman Islands','Benin','Libya','French Polynesia','Nepal','Chad','CAR','Macao','Syria','Eritrea','Saint Martin','Mongolia','Malawi','South Sudan','Zimbabwe','Angola','Antigua and Barbuda','Timor-Leste','Botswana','Grenada','Laos','Belize','Fiji','New Caledonia','Curaçao','Dominica','Namibia','Saint Kitts and Nevis','Saint Lucia','St. Vincent Grenadines','Nicaragua','Falkland Islands','Turks and Caicos','Burundi','Montserrat','Greenland','Seychelles','Gambia','Suriname','Vatican City','MS Zaandam','Mauritania','Papua New Guinea','Sao Tome and Principe','Bhutan','British Virgin Islands','St. Barth','Western Sahara','Caribbean Netherlands','Anguilla','Saint Pierre Miquelon','Yemen','China']
-# lowerCountryNames=[x.lower() for x in countryNames]
-
-# def fixCountryNames(name):
-#     return countryNames[lowerCountryNames.index(name)]
-
-# def apiReq(countries):
-#     apiArr=[]
-#     for item in countries:
-#         querystring = {"country":fixCountryNames(item)}
-    
-#         headers = {
-#             'x-rapidapi-host': "coronavirus-monitor.p.rapidapi.com",
-#             'x-rapidapi-key': os.environ["apikey"] # security measure, see ".env" in files to find the key
-#             }
-
-#         response = requests.request("GET", "https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_particular_country.php", headers=headers, params=querystring)
-
-#         json_data = response.json()
-        
-#         json_data = json_data.values()
-
-#         #json_data = json_data['stat_by_country']
-
-#         json_data = sorted(json_data, key=lambda k: k['record_date']) 
-#         json_data.reverse()
-#         apiArr.append(json_data)
-#     return apiArr
