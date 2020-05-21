@@ -1,5 +1,16 @@
 var fs = require("fs"),
-  exec = require("child_process").exec;
+  exec = require("child_process").exec,
+    fetch=require("node-fetch");
+var csldat,slcdat;
+var updCDat=async ()=>{
+  //every hour update countries.json
+  //var data=await (await fetch("https://api.covid19api.com/countries")).json();
+  var data=(await (await fetch("https://api.covid19api.com/summary")).json())["Countries"];
+  csldat=JSON.stringify(Object.fromEntries(data.map(e=>[e["Country"],e["Slug"]])));
+  fs.writeFileSync("countriesSlug.json",csldat);
+};
+setInterval(updCDat,3600000);
+updCDat().then(()=>{
 require("http")
   .createServer((req, res) => {
     var mimeType = "image/png";
@@ -10,7 +21,7 @@ require("http")
     }
     res.writeHead(200, { "Content-Type": mimeType });
     if (["", "/"].includes(req.url)) {
-      res.write(fs.readFileSync("public/index.html", "utf8"));
+      res.write(fs.readFileSync("public/index.html", "utf8").replace("***countries***",fs.readFileSync("countriesSlug.json","utf8")));
     } else if (req.url.startsWith("/c/")) {
       if (!fs.existsSync("/tmp/c")) fs.mkdirSync("/tmp/c");
       var execProcess = exec(
@@ -37,3 +48,4 @@ require("http")
     res.end();
   })
   .listen(8080);
+});
