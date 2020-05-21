@@ -25,14 +25,10 @@ To use our Coronavirus tracker, simply use our drop drown and select any country
 * [Python 3.7.7](https://www.python.org/)
    * [Matplotlib](https://matplotlib.org/)
    * [Requests](https://requests.readthedocs.io/en/master/)
-   
 * [Node 12](https://nodejs.org/en/)
    * [Node-fetch](https://www.npmjs.com/package/node-fetch)
-   
 * [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
-
 * [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3)
-   
 * [Covid19API](https://covid19api.com/)
 
 ## Clone
