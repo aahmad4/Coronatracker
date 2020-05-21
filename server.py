@@ -122,24 +122,6 @@ if not os.path.exists("/tmp/c/"+arg1+".png") or os.path.getmtime("/tmp/c/"+arg1+
 # def fixCountryNames(name):
 #     return countryNames[lowerCountryNames.index(name)]
 
-# def lineValsGen(country,json_data):
-#     xvals = []
-#     yvals = []
-    
-#     for item in json_data:
-#         date = item['record_date'][6:10]
-#         tdy = datetime.date.today()
-        
-#         if date in xvals:
-#             pass
-#         else:
-#             xvals.append(date)
-#             yvals.append( int(item["active_cases"].replace(",","")) )
-    
-#     xvals.reverse()
-#     yvals.reverse()
-#     return [xvals,yvals]
-
 # def apiReq(countries):
 #     apiArr=[]
 #     for item in countries:
