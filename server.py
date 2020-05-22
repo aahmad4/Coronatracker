@@ -114,4 +114,3 @@ if not os.path.exists("/tmp/c/"+arg1+".png") or os.path.getmtime("/tmp/c/"+arg1+
         comp(spl[0], spl[1], apiRes[0], apiRes[1])
     else:
         graph(arg1, apiReq([arg1])[0])
-       
