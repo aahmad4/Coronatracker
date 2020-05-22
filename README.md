@@ -6,7 +6,7 @@ https://coronatracker.glitch.me/
 ## How To Use
 To use our Coronavirus tracker, simply use our drop drown and select any country you'd like, and instantly view live statistics regarding the disease in that country. We have another feature that allows the end-user to compare the amount of people with the disease in multiple countries.
 
-(Note: All statistics of Coronavirus are updated roughly once an hour)
+(Note: All statistics of Coronavirus are updated roughly once an hour.)
 
 
 ## Screenshots of Website
