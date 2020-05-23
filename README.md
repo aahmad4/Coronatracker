@@ -19,7 +19,7 @@ To use our Coronavirus tracker, simply use our drop drown and select any country
 * [server.js](https://github.com/aahmad4/Live-Coronavirus-Tracker/blob/master/server.js): This contains our first back-end programming file which was written in Node.js. This file contains the web server and assets to run the python aspect and return the images of data to the end-user.
 * [server.py](https://github.com/aahmad4/Live-Coronavirus-Tracker/blob/master/server.py): This is our second back-end programming language. This file contains the logic for the server to communicate with the JavaScript and HTML. Also, this is where we have the logic written for using the Covid19 API to make our own graphs with matplotlib and distrubute them to the end-user.
 * [index.html](https://github.com/aahmad4/Live-Coronavirus-Tracker/blob/master/public/index.html) and [style.css](https://github.com/aahmad4/Live-Coronavirus-Tracker/blob/master/public/style.css) in the public folder both contain the front-end of the website and that's where the user interface and overall design of the website was developed.
-* The [old branch](https://github.com/aahmad4/Live-Coronavirus-Tracker/tree/old) contains the previously held code for the website using Rapid API. After this API went down, I transferred the code to the [Covid19API](https://covid19api.com/) and fixed a lot of the server side code. Now this new code resides in the master branch. 
+* The [`old` branch](https://github.com/aahmad4/Live-Coronavirus-Tracker/tree/old) contains the previously held code for the website using Rapid API. After this API went down, I transferred the code to the [Covid19API](https://covid19api.com/) and fixed a lot of the server side code. Now this new code resides in the master branch. 
 
 ## Built With
 
