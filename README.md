@@ -40,7 +40,7 @@ git clone https://github.com/aahmad4/Live-Coronavirus-Tracker
 ## Implementation
 
 In [server.js](https://github.com/aahmad4/Live-Coronavirus-Tracker/blob/master/server.js) change the `python3` command 
-based on your python 3 installation.
+based on your python 3 installation. 
 
 ```javascript
 var execProcess = exec(
@@ -53,6 +53,16 @@ var execProcess = exec(
           '"'
       );
 ```
+
+## Usage 
+```
+node server.js
+```
+Then go to 
+```
+localhost:8080
+```
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
