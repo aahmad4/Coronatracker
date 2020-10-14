@@ -1,7 +1,12 @@
-# Live Coronavirus Tracker
-A live coronavirus tracking website, made with a back-end of Node.js / Python and a front-end of HTML / CSS, which tracks international data on the COVID-19 pandemic and displays it in easy to read graphics. This website was created as a collaboration with Shiva (GH: shivaganapathy) and Sam (GH: ayunami2000). I was responsible for designing the user interface for the website, managing the server side coding, as well as handeling the API calls and refactoring. The website is hosted on glitch and the link can be found [here](https://coronatracker.glitch.me/) or below.
+<h1 align="center">Coronatracker</h1> 
 
-https://coronatracker.glitch.me/
+<p align="center">
+A live coronavirus tracking website, made with a back-end of Node.js / Python and a front-end of HTML / CSS, which tracks international data on the COVID-19 pandemic and displays it in easy to read graphics. This website was created as a collaboration with Shiva (GH: shivaganapathy) and Sam (GH: ayunami2000). I was responsible for designing the user interface for the website, managing the server side coding, as well as handeling the API calls and refactoring. 
+</p>
+
+<p align="center">
+A link to an online demo version can be found here: <a href="https://coronatracker.glitch.me" target="_blank">coronatracker.glitch.me</a>
+</p>
 
 ## How To Use
 To use our Coronavirus tracker, simply use our drop drown and select any country you'd like, and instantly view live statistics regarding the disease in that country. We have another feature that allows the end-user to compare the amount of people with the disease in multiple countries.
@@ -32,12 +37,14 @@ To use our Coronavirus tracker, simply use our drop drown and select any country
 * [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3)
 * [Covid19API](https://covid19api.com/)
 
-## Clone
+## Setup
+
+#### Clone
 ```bash
-git clone https://github.com/aahmad4/Live-Coronavirus-Tracker
+git clone https://github.com/aahmad4/Coronatracker
 ```
 
-## Implementation
+#### Implementation
 
 In [server.js](https://github.com/aahmad4/Live-Coronavirus-Tracker/blob/master/server.js) change the `python3` command 
 based on your python 3 installation. 
@@ -54,7 +61,10 @@ var execProcess = exec(
       );
 ```
 
-## Usage 
+#### Usage 
+```
+cd Coronatracker
+```
 ```
 node server.js
 ```
