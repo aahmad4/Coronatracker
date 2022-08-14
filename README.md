@@ -1,7 +1,7 @@
 <h1 align="center">Coronatracker</h1> 
 
 <p align="center">
-A live coronavirus tracking website, made with a back-end of Node.js / Python and a front-end of HTML / CSS, which tracks international data on the COVID-19 pandemic and displays it in easy to read graphics. This website was created as a collaboration with Shiva (GH: shivaganapathy) and Sam (GH: ayunami2000). I was responsible for designing the user interface for the website, managing the server side coding, as well as handeling the API calls and refactoring. 
+A coronavirus tracking website, made with a back-end of Node.js / Python and a front-end of HTML / CSS, which tracks international data on the COVID-19 pandemic and displays it in easy to read graphics. This website was created as a collaboration with Shiva (GH: shivaganapathy) and Sam (GH: ayunami2000)
 </p>
 
 <p align="center">
@@ -9,9 +9,7 @@ A link to an online demo version can be found here: <a href="https://coronatrack
 </p>
 
 ## How To Use
-To use our Coronavirus tracker, simply use our drop drown and select any country you'd like, and instantly view live statistics regarding the disease in that country. We have another feature that allows the end-user to compare the amount of people with the disease in multiple countries.
-
-(Note: All statistics of Coronavirus are updated roughly once an hour.)
+To use our Coronavirus tracker, simply use our drop drown to select a country, and view statistics regarding the disease in that country. We have another feature that allows the end-user to compare the amount of people with the disease in 2 countries.
 
 
 ## Screenshots of Website
@@ -28,14 +26,10 @@ To use our Coronavirus tracker, simply use our drop drown and select any country
 
 ## Built With
 
-* [Python 3.7.7](https://www.python.org/)
-   * [Matplotlib](https://matplotlib.org/)
-   * [Requests](https://requests.readthedocs.io/en/master/)
-* [Node 12](https://nodejs.org/en/)
+* [Matplotlib](https://matplotlib.org/)
+* [Node.js](https://nodejs.org/en/)
    * [Node-fetch](https://www.npmjs.com/package/node-fetch)
-* [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
-* [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3)
-* [Covid19API](https://covid19api.com/)
+* [Covid19 API](https://covid19api.com/)
 
 ## Setup
 
