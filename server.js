@@ -65,5 +65,5 @@ updCDat().then(() => {
         res.write(fs.readFileSync("public" + req.url, "utf8"));
     }
     res.end();
-  }).listen(8080);
+  }).listen(process.env.PORT || 8080);
 });
