@@ -2,66 +2,70 @@
 <html>
   <head>
     <title>Coronavirus Tracker</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script>
-      var countrySelect,countryImage,countryImageBar,countrySelect1,countrySelect2,countryImageComp;
-      window.onload=function(){
-        document.body.className='';
+      var countrySelect,
+        countryImage,
+        countryImageBar,
+        countrySelect1,
+        countrySelect2,
+        countryImageComp;
+      window.onload = function () {
+        document.body.className = "";
       };
-      window.onbeforeunload=function(){
-        document.body.className='fade';
+      window.onbeforeunload = function () {
+        document.body.className = "fade";
       };
     </script>
   </head>
   <body class="fade">
     <h1>Coronavirus Tracker</h1>
     <p>
-      This tool provides charts and graphs of coronavirus statistics for different countries. The data is updated roughly once every hour.
+      This tool provides charts and graphs of coronavirus statistics for
+      different countries. The data is updated roughly once every hour.
     </p>
-    <br/>
-    <h3>
-      Country By Country
-    </h3>
-    <br/>
+    <br />
+    <br />
+    <p>
+      Note: The data is based on the year 2022 due to the changing nature of
+      Covid-19 and subsequent lack of data.
+    </p>
+    <br />
+    <h3>Country By Country</h3>
+    <br />
     <div class="dropdown">
       <fieldset>
         <legend>Select a Country</legend>
         <select id="countries"></select>
       </fieldset>
     </div>
-    <br/>
-    <button onclick="updateImages();">
-      Get Data
-    </button>
-    <br/>
-    <br/>
+    <br />
+    <button onclick="updateImages();">Get Data</button>
+    <br />
+    <br />
     <img id="countryImage" />
     <img id="countryImageBar" />
-    <h3>
-      Compare Active Cases between Countries
-    </h3>
-    <br/>
+    <h3>Compare Active Cases between Countries</h3>
+    <br />
     <div class="dropdown">
       <fieldset>
         <legend>Select Country 1</legend>
         <select id="country1"></select>
       </fieldset>
     </div>
-    <br/>
+    <br />
     <div class="dropdown">
       <fieldset>
         <legend>Select Country 2</legend>
         <select id="country2"></select>
       </fieldset>
     </div>
-    <br/>
-    <button onclick="updateImagesComp();">
-      Compare countries
-    </button>
-    <br/>
-    <br/>
+    <br />
+    <button onclick="updateImagesComp();">Compare countries</button>
+    <br />
+    <br />
     <img id="countryImageComp" />
     <script>
       countrySelect = document.getElementById("countries");
@@ -83,10 +87,6 @@
       var csljson=***countries***;//node js replaces this with the country list when the page is sent to web
       Object.keys(csljson).forEach(n=>[...document.querySelectorAll("select")].forEach(e=>e.options.add(new Option(n))));
     </script>
-    <br/><br/><br/>
-    
-    <div id="footer">
-      Remember To Wash Your Hands ©Copyright 2020
-    </div>
+    <br /><br /><br />
   </body>
 </html>
