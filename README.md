@@ -5,7 +5,7 @@ A coronavirus tracking website, made with a back-end of Node.js / Python and a f
 </p>
 
 <p align="center">
-A link to an online demo version can be found here: <a href="https://coronatracker.glitch.me" target="_blank">coronatracker.glitch.me</a>
+A link to an online demo version can be found here: <a href="https://coronatracker-44862a893709.herokuapp.com" target="_blank">coronatracker-44862a893709.herokuapp.com</a>
 </p>
 
 ## How To Use
