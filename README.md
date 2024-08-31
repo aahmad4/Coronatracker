@@ -4,10 +4,6 @@
 A coronavirus tracking website, made with a back-end of Node.js / Python and a front-end of HTML / CSS, which tracks international data on the COVID-19 pandemic and displays it in easy to read graphics. This website was created as a collaboration with Shiva (GH: shivaganapathy) and Sam (GH: ayunami2000)
 </p>
 
-<p align="center">
-A link to an online demo version can be found here: <a href="https://coronatracker-44862a893709.herokuapp.com" target="_blank">coronatracker-44862a893709.herokuapp.com</a>
-</p>
-
 ## How To Use
 To use our Coronavirus tracker, simply use our drop drown to select a country, and view statistics regarding the disease in that country. We have another feature that allows the end-user to compare the amount of people with the disease in 2 countries.
 
